@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Chat App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h2>Real-Time Chat</h2>
+            <div class="online-indicator">
+                <div class="online-dot"></div>
+                <span id="online-count">1 Online</span>
+            </div>
+        </div>
+        
+        <div class="chat-messages" id="chat-messages">
+            <!-- Messages will be added here -->
+        </div>
+        
+        <div class="typing-indicator" id="typing-indicator"></div>
+        
+        <div class="chat-input">
+            <input type="text" id="message-input" placeholder="Type a message..." autocomplete="off">
+            <button class="send-button" id="send-button">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Username Modal -->
+    <div class="modal" id="username-modal">
+        <div class="modal-content">
+            <h2>Welcome to Chat App</h2>
+            <p>Please enter your username to continue:</p>
+            <input type="text" id="username-input" placeholder="Your username" autofocus>
+            <button id="join-button">Join Chat</button>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
